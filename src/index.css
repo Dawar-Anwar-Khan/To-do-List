@@ -66,3 +66,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Scrollbar for sidebar + todo section only */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px; /* thickness */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent; /* track color */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* Tailwind gray-600 */
+  border-radius: 9999px; /* rounded thumb */
+}
+
+body{
+  overflow: hidden;
+}
