@@ -26,7 +26,7 @@ const ToDoList = () => {
   };
 
   return (
-    <main className=" flex-1 flex flex-col bg-gray-200 items-center pt-10 space-y-4">
+    <main className=" flex-1 flex flex-col bg-gray-200 items-center pt-10 space-y-4 md:px-0 px-5 overflow-y-auto scrollbar-custom h-[560px] md:h-[650px]">
       <Card
         className="w-full max-w-md shadow-2xl py-6 bg-no-repeat bg-right-bottom"
         style={{
@@ -57,11 +57,11 @@ const ToDoList = () => {
       </Card>
 
       {/* Show todos */}
-      <ul className="space-y-2 w-full max-w-md ">
+      <ul className="space-y-2 max-w-2xl">
         {todos.map((todo) => (
           <li
             key={todo.id}
-            className="flex justify-between items-center bg-white p-2 rounded shadow"
+            className="flex flex-shrink flex-wrap space-x-4 space-y-2 justify-between items-center bg-white p-2 rounded shadow"
           >
             <span
               onClick={() => toggleTodo(todo.id)}
@@ -86,3 +86,4 @@ const ToDoList = () => {
 };
 
 export default ToDoList;
+

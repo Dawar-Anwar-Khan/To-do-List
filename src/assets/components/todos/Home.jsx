@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 const Home = () => {
   
-  const [openSide, setOpenSide] = useState(false)
+  const [openSide, setOpenSide] = useState(true)
 
   const ToggleSide = () => {
     setOpenSide(!openSide)
@@ -12,11 +12,11 @@ const Home = () => {
 
   return (
   <>
-  <div className="flex h-screen relative overflow-hidden">
+  <div className="flex h-screen relative overflow-hidden mx-auto max-w-screen-2xl">
     <div onClick={ToggleSide} className={`absolute transition-transform ${ openSide ? ' md:-translate-x-48 -translate-x-64 duration-300' : ''}`}>
       <SideTDL />
     </div>
-        <div className='flex-1 ml-2 bg-gray-200 overflow-y-auto scrollbar-custom h-full'>
+        <div className='flex-1 bg-gray-200'>
           <ToDoList />
         </div>
       </div>
