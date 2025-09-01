@@ -13,8 +13,8 @@ const Home = () => {
   return (
   <>
   <div className="flex h-screen relative overflow-hidden mx-auto max-w-screen-2xl">
-    <div onClick={ToggleSide} className={`absolute transition-transform ${ openSide ? ' md:-translate-x-48 -translate-x-64 duration-300' : ''}`}>
-      <SideTDL />
+    <div className={`absolute transition-transform duration-700 ${ openSide ? ' md:-translate-x-48 -translate-x-64' : ''}`}>
+      <SideTDL ToggleSide={ToggleSide}/>
     </div>
         <div className='flex-1 bg-gray-200'>
           <ToDoList />
